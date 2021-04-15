@@ -14,7 +14,7 @@ const ruffle = [
     'Rico',
     'Severin',
     'Svitlana',
-    'Muhamed',
+    'Mohamed',
     'Lucas',
 ]
 
@@ -66,7 +66,6 @@ function shuffleDaRuffle() {
         console.log("GroupFour: " + peepo)
         groupFourHtml.innerHTML += "<li>" + peepo + "</li>"
     })
-
 }
 
 
