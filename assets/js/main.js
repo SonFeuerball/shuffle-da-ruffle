@@ -23,16 +23,27 @@ const groupTwoHtml = document.getElementById('groupTwo')
 const groupThreeHtml = document.getElementById('groupThree')
 const groupFourHtml = document.getElementById('groupFour')
 
+const wheel = document.getElementById('wheel')
+
 //shuffle da ruffle 
 //https://medium.com/@nitinpatel_20236/how-to-shuffle-correctly-shuffle-an-array-in-javascript-15ea3f84bfb
 
 let shuffledRuffle = ruffle;
 function shuffleDaRuffle() {
+
     //list reset
     groupOneHtml.innerHTML = ""
     groupTwoHtml.innerHTML = ""
     groupThreeHtml.innerHTML = ""
     groupFourHtml.innerHTML = ""
+
+    wheel.classList.add('spinny-anim')
+
+    wheel.addEventListener('animationend', onAnimEnd, false)
+
+    function onAnimEnd() {
+        wheel.classList.remove('spinny-anim')
+    }
 
     for (let i = shuffledRuffle.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * i)

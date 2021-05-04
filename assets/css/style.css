@@ -1,0 +1,157 @@
+html {
+  min-width: 400px;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1%;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+}
+
+body div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body div:nth-of-type(1) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  background-image: linear-gradient(45deg, #9572cc 12.5%, #f0ec7f 12.5%, #f0ec7f 25%, #e64040 25%, #e64040 37.5%, #54b851 37.5%, #54b851 50%, #9572cc 50%, #9572cc 62.5%, #f0ec7f 62.5%, #f0ec7f 75%, #e64040 75%, #e64040 87.5%, #54b851 87.5%, #54b851 100%);
+}
+
+body div:nth-of-type(2) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  background-image: linear-gradient(135deg, #9572cc 12.5%, #f0ec7f 12.5%, #f0ec7f 25%, #e64040 25%, #e64040 37.5%, #54b851 37.5%, #54b851 50%, #9572cc 50%, #9572cc 62.5%, #f0ec7f 62.5%, #f0ec7f 75%, #e64040 75%, #e64040 87.5%, #54b851 87.5%, #54b851 100%);
+}
+
+body div:nth-of-type(3) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  background-image: linear-gradient(135deg, #9572cc 12.5%, #f0ec7f 12.5%, #f0ec7f 25%, #e64040 25%, #e64040 37.5%, #54b851 37.5%, #54b851 50%, #9572cc 50%, #9572cc 62.5%, #f0ec7f 62.5%, #f0ec7f 75%, #e64040 75%, #e64040 87.5%, #54b851 87.5%, #54b851 100%);
+}
+
+body div:nth-of-type(4) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  background-image: linear-gradient(45deg, #9572cc 12.5%, #f0ec7f 12.5%, #f0ec7f 25%, #e64040 25%, #e64040 37.5%, #54b851 37.5%, #54b851 50%, #9572cc 50%, #9572cc 62.5%, #f0ec7f 62.5%, #f0ec7f 75%, #e64040 75%, #e64040 87.5%, #54b851 87.5%, #54b851 100%);
+}
+
+body section {
+  margin: 25%;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: linear-gradient(40deg, #33ace8 12.5%, #f0eb65 12.5%, #f0eb65 25%, #f558f5 25%, #f558f5 37.5%, #eb9752 37.5%, #eb9752 50%, #33ace8 50%, #33ace8 62.5%, #f0eb65 62.5%, #f0eb65 75%, #f558f5 75%, #f558f5 87.5%, #eb9752 87.5%, #eb9752 100%);
+  background-size: 124.46px 104.43px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: gray;
+  border-radius: 50%;
+}
+
+body section button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body .spinny-anim {
+  -webkit-animation-name: spinny;
+          animation-name: spinny;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+@-webkit-keyframes spinny {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  30% {
+    -webkit-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+  }
+  100% {
+    -webkit-transform: rotate(2880deg);
+            transform: rotate(2880deg);
+  }
+}
+
+@keyframes spinny {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  30% {
+    -webkit-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+  }
+  100% {
+    -webkit-transform: rotate(2880deg);
+            transform: rotate(2880deg);
+  }
+}
+
+body section button {
+  margin: 0 auto;
+  font-size: 2.0rem;
+  padding: 1.25rem 2.5rem;
+  display: block;
+  background-color: #009ac9;
+  border: 1px solid transparent;
+  color: #ffffff;
+  font-weight: 300;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body section button:hover {
+  background-color: #ffffff;
+  color: #009ac9;
+  border-color: #009ac9;
+}
+/*# sourceMappingURL=style.css.map */
