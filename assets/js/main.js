@@ -24,6 +24,7 @@ const groupThreeHtml = document.getElementById('groupThree')
 const groupFourHtml = document.getElementById('groupFour')
 
 const wheel = document.getElementById('wheel')
+const shuffleButton = document.getElementById('shuffleButton')
 
 //shuffle da ruffle 
 //https://medium.com/@nitinpatel_20236/how-to-shuffle-correctly-shuffle-an-array-in-javascript-15ea3f84bfb
@@ -39,7 +40,12 @@ function shuffleDaRuffle() {
 
     wheel.classList.add('spinny-anim')
 
+    wheel.addEventListener('animationstart', onAnimStart, false)
     wheel.addEventListener('animationend', onAnimEnd, false)
+
+    function onAnimStart() {
+        shuffleButton.style.display = 'none'
+    }
 
     function onAnimEnd() {
         wheel.classList.remove('spinny-anim')

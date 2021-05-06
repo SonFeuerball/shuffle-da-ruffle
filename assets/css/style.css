@@ -75,6 +75,9 @@ body div ul {
   font-size: 3em;
   color: white;
   font-weight: bolder;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 body section {
