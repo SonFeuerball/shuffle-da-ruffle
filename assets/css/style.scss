@@ -54,11 +54,18 @@ body {
 
             align-self: center;
 
+            display: none;
             // li {
             //     border-radius: 2px;
             //     border-style: solid;
             //     border-color: gray;
             // }
+        }
+
+        button {
+            display: none;
+            @extend %button-style;
+            align-self: center;
         }
     }
 
@@ -83,7 +90,7 @@ body {
 
         border-width: 10px;
         border-style: solid;
-        border-color: gray;
+        border-color: white;
         border-radius: 50%;
 
         button {
@@ -117,7 +124,7 @@ body {
         font-family: 'Gloria Hallelujah', cursive;
         font-size: 2.0rem;
         padding: 1.25rem 2.5rem;
-        display: block;
+        // display: block;
         background-color: #009ac9;
         border: 1px solid transparent;
         color: #ffffff;

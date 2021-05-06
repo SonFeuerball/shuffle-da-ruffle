@@ -78,6 +78,14 @@ body div ul {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  display: none;
+}
+
+body div button {
+  display: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 body section {
@@ -106,7 +114,7 @@ body section {
   background-size: 124.46px 104.43px;
   border-width: 10px;
   border-style: solid;
-  border-color: gray;
+  border-color: white;
   border-radius: 50%;
 }
 
@@ -157,12 +165,11 @@ body .spinny-anim {
   }
 }
 
-body section button {
+body div button, body section button {
   margin: 0 auto;
   font-family: 'Gloria Hallelujah', cursive;
   font-size: 2.0rem;
   padding: 1.25rem 2.5rem;
-  display: block;
   background-color: #009ac9;
   border: 1px solid transparent;
   color: #ffffff;
@@ -172,7 +179,7 @@ body section button {
   transition: all 0.3s ease-in-out;
 }
 
-body section button:hover {
+body div button:hover, body section button:hover {
   background-color: #ffffff;
   color: #009ac9;
   border-color: #009ac9;

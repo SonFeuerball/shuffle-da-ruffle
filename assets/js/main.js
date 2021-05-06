@@ -18,19 +18,43 @@ const ruffle = [
     'Lucas',
 ]
 
+//shuffle da ruffle 
+//https://medium.com/@nitinpatel_20236/how-to-shuffle-correctly-shuffle-an-array-in-javascript-15ea3f84bfb
+
 const groupOneHtml = document.getElementById('groupOne')
 const groupTwoHtml = document.getElementById('groupTwo')
 const groupThreeHtml = document.getElementById('groupThree')
 const groupFourHtml = document.getElementById('groupFour')
 
+const revealOneButton = document.getElementById('revealOne')
+const revealTwoButton = document.getElementById('revealTwo')
+const revealThreeButton = document.getElementById('revealThree')
+const revealFourButton = document.getElementById('revealFour')
+
 const wheel = document.getElementById('wheel')
 const shuffleButton = document.getElementById('shuffleButton')
 
-//shuffle da ruffle 
-//https://medium.com/@nitinpatel_20236/how-to-shuffle-correctly-shuffle-an-array-in-javascript-15ea3f84bfb
+//sounds
+const yeaCheer = document.getElementById('yea')
+const wilhelmScreamCheer = document.getElementById('wilhelmScream')
+const catNOCheer = document.getElementById('catNO')
+const maleNOCheer = document.getElementById('maleNO')
+const hohoCheer = document.getElementById('hoho')
+
+let bgSound = document.getElementById('bgSound')
+// bgSound.load()
+// bgSound.addEventListener("error", function () {
+//     console.log("bg error")
+// })
+// bgSound.addEventListener("canplay", function () {
+//     bgSound.play()
+// })
+
 
 let shuffledRuffle = ruffle;
 function shuffleDaRuffle() {
+
+    bgSound.play()
 
     //list reset
     groupOneHtml.innerHTML = ""
@@ -51,12 +75,22 @@ function shuffleDaRuffle() {
         wheel.classList.remove('spinny-anim')
         wheel.style.display = 'none'
 
-        showResults()
+        // let tadaAudio = new Audio('tada.mp3')
+        // tadaAudio.play()
+        document.getElementById('tada').play()
+
+        prepareResults()
     }
 
 }
 
-function showResults() {
+function prepareResults() {
+
+    revealOneButton.style.display = 'block'
+    revealTwoButton.style.display = 'block'
+    revealThreeButton.style.display = 'block'
+    revealFourButton.style.display = 'block'
+
     for (let i = shuffledRuffle.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * i)
         const temp = shuffledRuffle[i]
@@ -89,6 +123,50 @@ function showResults() {
         console.log("GroupFour: " + peepo)
         groupFourHtml.innerHTML += "<li>" + peepo + "</li>"
     })
+}
+
+function revealOne() {
+    groupOneHtml.style.display = "block"
+    revealOneButton.style.display = "none"
+    playRandomCheer()
+}
+function revealTwo() {
+    groupTwoHtml.style.display = "block"
+    revealTwoButton.style.display = "none"
+    playRandomCheer()
+}
+function revealThree() {
+    groupThreeHtml.style.display = "block"
+    revealThreeButton.style.display = "none"
+    playRandomCheer()
+}
+function revealFour() {
+    groupFourHtml.style.display = "block"
+    revealFourButton.style.display = "none"
+    playRandomCheer()
+}
+
+function playRandomCheer() {
+    let random = Math.floor(Math.random() * 5)
+    console.log(random)
+
+    switch (random) {
+        case 0:
+            wilhelmScreamCheer.play()
+            break;
+        case 1:
+            catNOCheer.play()
+            break;
+        case 2:
+            maleNOCheer.play()
+            break;
+        case 3:
+            hohoCheer.play()
+            break;
+        case 4:
+            yeaCheer.play()
+            break;
+    }
 }
 
 

@@ -7,28 +7,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+    <link rel="shortcut icon" href="assets/img/favicon.PNG">
+
     <title>shuffle-da-ruffle</title>
 </head>
 
 <body>
 
     <div id="one">
-        <!-- <button id="revealOne" onclick="reviealOne()">Reveal</button> -->
+        <button id="revealOne" onclick="revealOne()">Reveal</button>
         <ul id="groupOne">
         </ul>
     </div>
 
     <div id="two">
+        <button id="revealTwo" onclick="revealTwo()">Reveal</button>
         <ul id="groupTwo">
         </ul>
     </div>
 
     <div id="three">
+        <button id="revealThree" onclick="revealThree()">Reveal</button>
         <ul id="groupThree">
         </ul>
     </div>
 
     <div id="four">
+        <button id="revealFour" onclick="revealFour()">Reveal</button>
         <ul id="groupFour">
         </ul>
     </div>
@@ -36,6 +41,35 @@
     <section id="wheel">
         <button id="shuffleButton" onclick="shuffleDaRuffle()">ShuffleDaRuffle!</button>
     </section>
+
+
+    <!-- <embed name="bg" src="assets/audio/beatOne.mp3" type="audio/mp3" width="1" height="1" hidden="true" loop="true"
+        autostart="true"> -->
+    <!-- <embed src="assets/audio/tada.mp3" type=""> -->
+
+    <audio id="bgSound">
+        <source src="assets/audio/beatOne.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="tada">
+        <source src="assets/audio/tada.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="yea">
+        <source src="assets/audio/yea.mp3" type="audio/mp3">
+    </audio>
+    <audio id="wilhelmScream">
+        <source src="assets/audio/wilhelmScream.mp3" type="audio/mp3">
+    </audio>
+    <audio id="maleNO">
+        <source src="assets/audio/maleNO.mp3" type="audio/mp3">
+    </audio>
+    <audio id="hoho">
+        <source src="assets/audio/hoho.mp3" type="audio/mp3">
+    </audio>
+    <audio id="catNO">
+        <source src="assets/audio/catNO.mp3" type="audio/mp3">
+    </audio>
 
     <script src="assets/js/main.js" charset="UTF-8"></script>
 </body>
