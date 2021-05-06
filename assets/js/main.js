@@ -40,6 +40,10 @@ const wilhelmScreamCheer = document.getElementById('wilhelmScream')
 const catNOCheer = document.getElementById('catNO')
 const maleNOCheer = document.getElementById('maleNO')
 const hohoCheer = document.getElementById('hoho')
+const whimperCheer = document.getElementById('whimper')
+const femaleSADCheer = document.getElementById('femaleSAD')
+
+const drumRoll = document.getElementById('drum')
 
 let bgSound = document.getElementById('bgSound')
 // bgSound.load()
@@ -91,6 +95,19 @@ function prepareResults() {
     revealThreeButton.style.display = 'block'
     revealFourButton.style.display = 'block'
 
+    revealOneButton.addEventListener('mouseenter', function () {
+        drumRoll.play()
+    })
+    revealTwoButton.addEventListener('mouseenter', function () {
+        drumRoll.play()
+    })
+    revealThreeButton.addEventListener('mouseenter', function () {
+        drumRoll.play()
+    })
+    revealFourButton.addEventListener('mouseenter', function () {
+        drumRoll.play()
+    })
+
     for (let i = shuffledRuffle.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * i)
         const temp = shuffledRuffle[i]
@@ -126,28 +143,36 @@ function prepareResults() {
 }
 
 function revealOne() {
+    drumRoll.pause()
+    drumRoll.load()
     groupOneHtml.style.display = "block"
     revealOneButton.style.display = "none"
     playRandomCheer()
 }
 function revealTwo() {
+    drumRoll.pause()
+    drumRoll.load()
     groupTwoHtml.style.display = "block"
     revealTwoButton.style.display = "none"
     playRandomCheer()
 }
 function revealThree() {
+    drumRoll.pause()
+    drumRoll.load()
     groupThreeHtml.style.display = "block"
     revealThreeButton.style.display = "none"
     playRandomCheer()
 }
 function revealFour() {
+    drumRoll.pause()
+    drumRoll.load()
     groupFourHtml.style.display = "block"
     revealFourButton.style.display = "none"
     playRandomCheer()
 }
 
 function playRandomCheer() {
-    let random = Math.floor(Math.random() * 5)
+    let random = Math.floor(Math.random() * 7)
     console.log(random)
 
     switch (random) {
@@ -165,6 +190,12 @@ function playRandomCheer() {
             break;
         case 4:
             yeaCheer.play()
+            break;
+        case 5:
+            whimper.play()
+            break;
+        case 6:
+            femaleSADCheer.play()
             break;
     }
 }
