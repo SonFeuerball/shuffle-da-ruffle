@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
 html {
     min-width: 400px;
     min-height: 400px;
@@ -8,6 +10,8 @@ html {
 body {
     margin: 0;
     padding: 0;
+
+    font-family: 'Gloria Hallelujah', cursive;
 
     height: 100vh;
     display: grid;
@@ -39,15 +43,38 @@ body {
             grid-row: 2 / 3;
             background-image: linear-gradient(45deg, #9572cc 12.50%, #f0ec7f 12.50%, #f0ec7f 25%, #e64040 25%, #e64040 37.50%, #54b851 37.50%, #54b851 50%, #9572cc 50%, #9572cc 62.50%, #f0ec7f 62.50%, #f0ec7f 75%, #e64040 75%, #e64040 87.50%, #54b851 87.50%, #54b851 100%);
         }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 3em;
+            color: white;
+            font-weight: bolder;
+
+            // li {
+            //     border-radius: 2px;
+            //     border-style: solid;
+            //     border-color: gray;
+            // }
+        }
     }
 
     section {
-        margin: 25%;
+        height: 100%;
+        width: 100%;
+        max-width: 500px;
+        max-height: 500px;
+        min-width: 500px;
+        min-height: 500px;
         grid-column: 1 / 3;
         grid-row: 1 / 3;
 
         display: flex;
         justify-content: center;
+
+        justify-self: center;
+        align-self: center;
 
         background-image: linear-gradient(40deg, #33ace8 12.50%, #f0eb65 12.50%, #f0eb65 25%, #f558f5 25%, #f558f5 37.50%, #eb9752 37.50%, #eb9752 50%, #33ace8 50%, #33ace8 62.50%, #f0eb65 62.50%, #f0eb65 75%, #f558f5 75%, #f558f5 87.50%, #eb9752 87.50%, #eb9752 100%);
         background-size: 124.46px 104.43px;
@@ -56,11 +83,6 @@ body {
         border-style: solid;
         border-color: gray;
         border-radius: 50%;
-
-        // animation-name: spinny;
-        // animation-iteration-count: 1;
-        // animation-duration: 2s;
-        // animation-timing-function: ease-out;
 
         button {
             align-self: center;
@@ -90,6 +112,7 @@ body {
 
 %button-style {
         margin: 0 auto;
+        font-family: 'Gloria Hallelujah', cursive;
         font-size: 2.0rem;
         padding: 1.25rem 2.5rem;
         display: block;

@@ -43,8 +43,14 @@ function shuffleDaRuffle() {
 
     function onAnimEnd() {
         wheel.classList.remove('spinny-anim')
+        wheel.style.display = 'none'
+
+        showResults()
     }
 
+}
+
+function showResults() {
     for (let i = shuffledRuffle.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * i)
         const temp = shuffledRuffle[i]
