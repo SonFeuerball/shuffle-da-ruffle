@@ -5,7 +5,7 @@ const ruffle = [
     'Bernd',
     'Bob',
     'Daniel',
-    'Daniela',
+    '👻',
     'Esther',
     'Olesja',
     'Özcan',
