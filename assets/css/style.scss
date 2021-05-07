@@ -140,6 +140,9 @@ body {
         top: +13%;
         left: +40%;
         font-size: 5em;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
         user-select: none;
         cursor: default;
     }
@@ -148,6 +151,9 @@ body {
         position: relative;
         top: +13%;
         font-size: 5em;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
         user-select: none;
         cursor: default;
     }
@@ -157,6 +163,9 @@ body {
         top: +14%;
         left: +20%;
         font-size: 5em;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
         user-select: none;
         cursor: default;
     }
