@@ -54,6 +54,10 @@ let bgSound = document.getElementById('bgSound')
 //     bgSound.play()
 // })
 
+//dance-man
+let head = document.getElementById('head')
+let leftHand = document.getElementById('leftHand')
+let rightHand = document.getElementById('rightHand')
 
 let shuffledRuffle = ruffle;
 function shuffleDaRuffle() {
@@ -85,6 +89,8 @@ function shuffleDaRuffle() {
 
         prepareResults()
     }
+
+    handleDanceMan()
 
 }
 
@@ -199,5 +205,41 @@ function playRandomCheer() {
             break;
     }
 }
+
+function handleDanceMan() {
+    head.innerHTML = "😮"
+    leftHand.innerHTML = "✋"
+    rightHand.innerHTML = "✋"
+    head.classList.remove('startIdleHead')
+    leftHand.classList.remove('startIdleLeftHand')
+    rightHand.classList.remove('startIdleRightHand')
+    head.classList.add('spinny-anim')
+    leftHand.classList.add('shakyHands')
+    rightHand.classList.add('shakyHands')
+
+    head.addEventListener('animationend', function () {
+        head.innerHTML = "🤢"
+        head.classList.remove('spinny-anim')
+        leftHand.classList.remove('shakyHands')
+        rightHand.classList.remove('shakyHands')
+
+        head.classList.add('startIdleHead')
+
+        setInterval(letsDance, 3000)
+    })
+}
+
+function letsDance() {
+    head.classList.remove('startIdleHead')
+    head.innerHTML = "😄"
+    leftHand.innerHTML = "✊"
+    rightHand.innerHTML = "✊"
+    head.classList.add('danceOneHead')
+    leftHand.classList.add('danceOneHands')
+    rightHand.classList.add('danceOneHands')
+}
+
+
+
 
 
