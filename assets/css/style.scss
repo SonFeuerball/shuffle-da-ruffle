@@ -140,12 +140,14 @@ body {
         top: +13%;
         left: +40%;
         font-size: 5em;
+        user-select: none;
     }
     #leftHand {
         display: inline-block;
         position: relative;
         top: +13%;
         font-size: 5em;
+        user-select: none;
     }
     #rightHand {
         display: inline-block;
@@ -153,6 +155,7 @@ body {
         top: +14%;
         left: +20%;
         font-size: 5em;
+        user-select: none;
     }
 }
 

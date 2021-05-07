@@ -50,14 +50,38 @@ let bgSound = document.getElementById('bgSound')
 // bgSound.addEventListener("error", function () {
 //     console.log("bg error")
 // })
-// bgSound.addEventListener("canplay", function () {
-//     bgSound.play()
-// })
+bgSound.addEventListener("ended", function () {
+    bgSound.play()
+})
 
 //dance-man
 let head = document.getElementById('head')
 let leftHand = document.getElementById('leftHand')
 let rightHand = document.getElementById('rightHand')
+
+let enrageCounter = 0;
+
+head.addEventListener('click', function () {
+    enrageCounter++
+    console.log(enrageCounter)
+    if (enrageCounter >= 10) {
+        enrageStageTwo()
+    } else if (enrageCounter >= 5) {
+        enrageStageOne()
+    }
+})
+
+function enrageStageOne() {
+    head.innerHTML = "😠"
+    leftHand.innerHTML = "👎"
+    rightHand.innerHTML = "👎"
+}
+function enrageStageTwo() {
+    head.innerHTML = "🤬"
+    leftHand.innerHTML = "🖕"
+    rightHand.innerHTML = "🖕"
+    enrageCounter = 0
+}
 
 let shuffledRuffle = ruffle;
 function shuffleDaRuffle() {

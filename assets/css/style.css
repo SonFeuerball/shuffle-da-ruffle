@@ -192,6 +192,10 @@ body #head {
   top: +13%;
   left: +40%;
   font-size: 5em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 body #leftHand {
@@ -199,6 +203,10 @@ body #leftHand {
   position: relative;
   top: +13%;
   font-size: 5em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 body #rightHand {
@@ -207,6 +215,10 @@ body #rightHand {
   top: +14%;
   left: +20%;
   font-size: 5em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 body article button, body section button {
